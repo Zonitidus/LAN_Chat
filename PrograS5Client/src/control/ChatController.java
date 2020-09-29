@@ -41,7 +41,7 @@ public class ChatController implements OnMessageListener {
 
 		this.connection = TCPConnection.getInstance();
 		this.connection.setListerOnMessage(this);
-		this.connection.getEmisor().setMessage(gson.toJson(new RepeatedClient(true)));
+		this.connection.getEmisor().setMessage(gson.toJson(new RepeatedClient(false)));
 
 		this.view.setOnCloseRequest((e) -> {
 

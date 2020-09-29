@@ -18,8 +18,6 @@ public class ChatWindow extends Stage {
 	private Scene scene;
 	private TextField messageTF;
 	private Button sendBtn;
-	private TextField clientID;
-	private Button sendDirectionBtn;
 	private TextArea messageArea;
 	private ChatController control;
 	private String name;
@@ -35,14 +33,10 @@ public class ChatWindow extends Stage {
 		this.messageTF = new TextField();
 		this.sendBtn = new Button("Enviar");
 		this.messageArea = new TextArea();
-		this.clientID = new TextField();
-		this.sendDirectionBtn = new Button("Enviar directo");
 
 		VBox vbox = new VBox();
 		vbox.getChildren().add(messageTF);
 		vbox.getChildren().add(sendBtn);
-		vbox.getChildren().add(clientID);
-		vbox.getChildren().add(sendDirectionBtn);
 		vbox.getChildren().add(messageArea);
 
 		HBox container = new HBox();
@@ -77,22 +71,6 @@ public class ChatWindow extends Stage {
 
 	public void setMessageArea(TextArea messageArea) {
 		this.messageArea = messageArea;
-	}
-
-	public TextField getClientID() {
-		return clientID;
-	}
-
-	public void setClientID(TextField clientID) {
-		this.clientID = clientID;
-	}
-
-	public Button getSendDirectionBtn() {
-		return sendDirectionBtn;
-	}
-
-	public void setSendDirectionBtn(Button sendDirectionBtn) {
-		this.sendDirectionBtn = sendDirectionBtn;
 	}
 
 	public ChatController getControl() {

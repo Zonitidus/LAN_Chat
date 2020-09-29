@@ -32,7 +32,7 @@ public class Receptor extends Thread {
 					listener.onMessage(msg);
 				else if (this.connectionListener != null)
 					this.connectionListener.onConnection(msg);
-			} catch (IOException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 
